@@ -1,0 +1,300 @@
+        /*::links
+Icons: https://boxicons.com,
+Fonts: https://fonts.google.com/,
+ScrollReveal: https://scrollrevealjs.org/
+*/
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-padding-top: 2rem;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+         :root {
+            --main-color: yellowgreen;
+            --text-color: #444;
+            --heading-color: #000;
+            --anker-color: #fff;
+        }
+        /*----scrollbar-----*/
+        
+        html::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+        
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        html::-webkit-scrollbar-thumb {
+            background: var(--main-color);
+            border-radius: 5rem;
+        }
+        
+        header {
+            background: var(--main-color);
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+            position: fixed;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        
+        #menu-icon {
+            position: absolute;
+            display: none;
+            color: #fff;
+            font-size: 35px
+        }
+        
+        .logo a {
+            color: var(--anker-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .navbar ul {
+            display: flex;
+        }
+        
+        .navbar li {
+            position: relative;
+        }
+        
+        .navbar ul li a {
+            padding: 0 10px;
+            color: var(--anker-color);
+        }
+        
+        .navbar li a::after {
+            content: "";
+            width: 0;
+            height: 3px;
+            bottom: -4px;
+            left: 0;
+            background: #fff;
+            position: absolute;
+            transition: 0.5s;
+        }
+        
+        .navbar li a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-icon a {
+            color: #fff;
+            font-size: 20px;
+            margin: 10px;
+        }
+        /*---main--*/
+        
+        .main {
+            display: flex;
+            margin-top: 60px;
+        }
+        
+        article {
+            padding: 10px;
+        }
+        
+        aside {
+            flex: 0 0 20vw;
+            background: beige;
+            position: relative;
+            padding: 10px;
+            transition: 0.5s;
+        }
+        
+        aside ul {
+            padding: 0;
+        }
+        
+        aside ul a {
+            display: block;
+            color: var(--text-color);
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+        
+        aside ul a:hover {
+            background: var(--main-color);
+            color: #fff;
+        }
+        
+        aside .dropdown-content {
+            display: none;
+            background: #ccc;
+        }
+        
+        aside .dropdown-content a:hover {
+            color: var(--anker-color);
+            background: var(--main-color);
+        }
+        
+        aside .dropdown {
+            display: block;
+        }
+        
+        aside img {
+            width: 100%;
+        }
+        /*----------courses------*/
+        
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .read-mor {
+            display: none;
+            color: var(--main-color);
+            font-size: 20px;
+        }
+        
+        .box {
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 15px;
+            flex-basis: 32%;
+            display: flex;
+            flex-direction: column;
+            max-width: 370px;
+        }
+        
+        .box-img img {
+            width: 100%;
+        }
+        
+        .box h3 {
+            margin: 5px 0 1px;
+        }
+        
+        .box p {
+            margin: 0 0 10px;
+        }
+        
+        .title {
+            clear: both;
+        }
+        
+        .button {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        
+        .button a {
+            display: flex;
+            width: 100px;
+            padding: 10px 20px;
+            text-align: center;
+            border: 1px solid var(--main-color);
+            border-radius: 0.5rem;
+            background: #fff;
+            color: var(--text-color);
+            transition: 0.5s ease;
+        }
+        
+        .button a:hover {
+            background: var(--main-color);
+            color: var(--anker-color);
+        }
+        /*--footer--*/
+        
+        footer {
+            background: var(--main-color);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .footer-icon {
+            display: none;
+        }
+        
+        .footer-icon a {
+            color: #fff;
+            font-size: 20px;
+            margin: 10px;
+        }
+        /*---responsive---*/
+        
+        @media screen and (max-width: 950px) {
+            aside {
+                flex: 0 0 30vw;
+            }
+            .box {
+                flex-basis: 48%;
+            }
+        }
+        
+        @media screen and (max-width: 790px) {
+            header {
+                padding: 10px 35px;
+            }
+        }
+        
+        @media screen and (max-width: 660px) {
+            header {
+                padding: 1px;
+            }
+            .nav-icon {
+                display: none;
+            }
+            .footer-icon {
+                display: inline-block;
+            }
+        }
+        
+        @media screen and (max-width: 640px) {
+            header {
+                flex-direction: column;
+            }
+            #menu-icon {
+                display: flex;
+                left: 20px;
+                top: 30px;
+            }
+            .main {
+                margin-top: 80px;
+            }
+            .footer-icon a {
+                display: inline-block;
+            }
+            aside.left {
+                left: 0;
+            }
+            aside {
+                position: fixed;
+                width: 200px;
+                left: -300px;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            .courses {
+                flex-direction: column;
+                align-items: center;
+                clear: both;
+            }
+            .intro.overflow {
+                overflow: visible;
+                height: auto;
+            }
+            .intro {
+                height: 25vh;
+                overflow: hidden;
+                padding-bottom: 15px;
+            }
+            .read-mor {
+                display: block;
+            }
+        }
