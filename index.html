@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="style.css">
+    <!----boxicon css---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <header>
+        <i class="bx bx-menu" id="menu-icon" onclick="showMenu()"></i>
+        <div class="logo">
+            <a href="Web Devolping">Courses.com</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTECT US</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-icon">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-google-plus"></i></a>
+        </div>
+    </header>
+
+    <div class="main">
+        <aside class="sidebar-container" id="aside">
+            <ul>
+                <li><a href="#">Online Classes</a></li>
+                <li><a href="#" onclick="dropFunction()">Courses <i class="bx bx-chevron-down" id="down"></i></a></li>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">Web Development</a>
+                    <a href="#">App Development</a>
+                    <a href="#">Digital Marketing</a>
+                </div>
+                <li><a href="#">Prev-Videos</a></li>
+                <li><a href="#">Assignment</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+
+            <img src="images/img4.jpg" alt="">
+        </aside>
+        <article>
+            <div class="intro" id="intro">
+                <h2>Welcom To Our Website</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iste sint magni cumque minima beatae nemo numquam animi odio hic magnam dignissimos itaque enim ab, fugit eligendi. Eaque repellat illo eveniet vero. Aut nemo odit, consectetur
+                    illo culpa veniam, soluta est obcaecati consequuntur libero excepturi eligendi explicabo? Nam facere provident nostrum, error nobis illum quisquam iste cupiditate consequuntur laborum non quas assumenda eligendi placeat sint cumque,
+                    iusto ipsam quod amet qui dolorem. Itaque ipsam ut, tempora recusandae rem quaerat libero voluptatem et est ducimus fuga soluta quae laudantium magnam animi, voluptates quas repellendus eum iste labore. Qui quae reiciendis sapiente?</p>
+            </div>
+            <a class="read-mor" href="#" onclick="readMore()">Read more <i class="bx bx-chevron-down" id="read"></i></a>
+            <h2>Our Courses</h2>
+            <div class="courses">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="images/img1.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, deleniti?</p>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="btn">Apply</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-img">
+                        <img src="images/img2.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>Mobile App Development</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, deleniti?</p>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="btn">Apply</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://media.istockphoto.com/photos/digital-transformation-or-business-online-concepts-with-young-person-picture-id1278627303?b=1&k=20&m=1278627303&s=170667a&w=0&h=gg0wHeokpVNR2nA8hQcwTdEWYwhFvtzOdYot5UR8MzY=" alt="" style="width: 90%;">
+                    </div>
+                    <div class="title">
+                        <h3>Digital Marketing</h3>
+                    </div>
+                    <div class="desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, deleniti?</p>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="btn">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&#169; Courses.com All rights reserved</p>
+
+        <div class="footer-icon">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-google-plus"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        var a = document.getElementById("dropdown-content");
+        var b = document.getElementById("down");
+
+        function dropFunction() {
+            a.classList.toggle("dropdown");
+            b.classList.toggle("bx-chevron-up");
+        };
+    </script>
+    <script>
+        var menu = document.getElementById("menu-icon");
+        var aside = document.getElementById("aside");
+
+        function showMenu() {
+            menu.classList.toggle("bx-x");
+            aside.classList.toggle("left");
+        }
+    </script>
+    <script>
+        var intro = document.getElementById("intro");
+        var readBtn = document.getElementById("read");
+
+        function readMore() {
+            readBtn.classList.toggle("bx-chevron-up");
+            intro.classList.toggle("overflow");
+        }
+    </script>
+
+</body>
+
+</html>
